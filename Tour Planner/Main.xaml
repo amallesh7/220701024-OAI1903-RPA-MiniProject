@@ -1,0 +1,432 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1113.6,2380" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Activities.Contracts</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.IMAP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Word.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Activities.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="926.4,7944" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="location" />
+      <Variable x:TypeArguments="x:String" Name="variable1" />
+      <Variable x:TypeArguments="x:String" Name="current" />
+      <Variable x:TypeArguments="x:String" Name="distance" />
+      <Variable x:TypeArguments="x:String" Name="discription" />
+      <Variable x:TypeArguments="x:String" Name="tour" />
+      <Variable x:TypeArguments="x:String" Name="places" />
+      <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="getmail" />
+      <Variable x:TypeArguments="x:String" Name="pwd" />
+      <Variable x:TypeArguments="x:String" Name="pass" />
+      <Variable x:TypeArguments="x:String" Name="name" />
+      <Variable x:TypeArguments="x:String" Name="time" />
+      <Variable x:TypeArguments="x:String" Name="p1" />
+      <Variable x:TypeArguments="x:String" Name="p2" />
+      <Variable x:TypeArguments="x:String" Name="p4" />
+      <Variable x:TypeArguments="x:String" Name="p3" />
+      <Variable x:TypeArguments="x:Int32" Default="512" Name="kilo" />
+      <Variable x:TypeArguments="x:String" Name="da" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" Title="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="926.4,273.6" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Enter your name">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[name]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="926.4,273.6" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter the location " Title="Location">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[location]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" Title="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="926.4,273.6" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Enter the current location">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[current]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Wikipedia" sap:VirtualizedContainerService.HintSize="926.4,7100" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="a16f9b28-cbb7-4fff-82bb-4ebdb7a66d4f" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="892.8,6860" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'en'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="859.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="HardwareEvents" ScopeIdentifier="a16f9b28-cbb7-4fff-82bb-4ebdb7a66d4f" Text="[location + &quot;[k(Enter)]&quot;]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.wikipedia.org/" CVScreenId="d5aab729-c884-4b70-aed8-b6b818fb7e1e" CvElementArea="677, 783, 499, 56" CvType="InputBox" DesignTimeRectangle="678, 784, 493, 55" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='searchInput' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='searchInput' tag='INPUT' type='search' class='' aaname='Search Wikipedia' /&gt;" Guid="201bc33c-91ec-43f1-b137-9e0e5299b979" InformativeScreenshot="25df29f3d60fc5bac7191f14e559f2bf.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Wikipedia' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="d5aab729-c884-4b70-aed8-b6b818fb7e1e" CvElementArea="677, 783, 499, 56" CvType="InputBox" DesignTimeRectangle="1106, 797, 20, 30" ElementType="Text" FullSelectorArgument="&lt;webctrl id='jsLangLabel' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='jsLangLabel' tag='LABEL' type='' class='js-langpicker-label' aaname='en' check:innerText='EN' /&gt;" Guid="d71763ed-654b-4bab-9f7c-8975a774e6f0" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="859.2,232" sap2010:WorkflowViewState.IdRef="AnchorBase_1">
+              <ui:AnchorBase.Action>
+                <ActivityAction x:TypeArguments="ui:Anchor">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                  </ActivityAction.Argument>
+                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'P'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_1">
+                    <ui:GetValue.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2a520f94-92b2-4c01-beb7-c20202e90c7e" InformativeScreenshot="3412816a5bf0ea2c04be40ce1bb1e332" Selector="&lt;webctrl tag='P' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:GetValue.Target>
+                    <ui:GetValue.Value>
+                      <OutArgument x:TypeArguments="x:String">[discription]</OutArgument>
+                    </ui:GetValue.Value>
+                  </ui:GetValue>
+                </ActivityAction>
+              </ui:AnchorBase.Action>
+              <ui:AnchorBase.AnchorProvider>
+                <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'A  /wiki/Kodaikanal'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+                  <ui:WaitUiElementAppear.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ff65df2c-91f0-44af-9bd4-97c0d4775000" InformativeScreenshot="337c9173089e7993c25c80d5a0f3e19a" Selector="&lt;webctrl parentid='ca-nstab-main' tag='SPAN' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:WaitUiElementAppear.Target>
+                </ui:WaitUiElementAppear>
+              </ui:AnchorBase.AnchorProvider>
+            </ui:AnchorBase>
+            <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="planner.txt" sap:VirtualizedContainerService.HintSize="859.2,166.4" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="DESCRIPTION :" />
+            <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="planner.txt" sap:VirtualizedContainerService.HintSize="859.2,166.4" sap2010:WorkflowViewState.IdRef="AppendLine_4" Text="[discription]" UseDefaultEncoding="False" />
+            <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="planner.txt" sap:VirtualizedContainerService.HintSize="859.2,166.4" sap2010:WorkflowViewState.IdRef="AppendLine_3" Text="TOP 10 PLACES TO VISIT :" UseDefaultEncoding="False" />
+            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: New tab" sap:VirtualizedContainerService.HintSize="859.2,5816.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="a0d1378a-b452-4449-a62c-8d717a209023" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="825.6,5575.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="792,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_9" InteractionMode="HardwareEvents" ScopeIdentifier="a0d1378a-b452-4449-a62c-8d717a209023" Text="[&quot;10 best places in &quot;+location + &quot;[k(Enter)]&quot;]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="edge://newtab/" CVScreenId="76a5345f-228e-40e1-b86a-64db652bc590" CvTextArea="561, 347, 138, 18" CvTextArgument="Search the web" CvType="Text" DesignTimeRectangle="556, 329, 838, 56" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;ctrl name='New tab' role='document' /&gt;&lt;ctrl name='Enter your search term' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='New tab' role='document' /&gt;&lt;ctrl name='Enter your search term' role='editable text' automationid='' /&gt;" Guid="311f0f57-a1f8-4c52-ae1a-f5727ebf79bf" InformativeScreenshot="65e7aaacf74cc7664109512a5889362c.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='New tab and 1 more page - Personal - Microsoft​ Edge' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="792,232" sap2010:WorkflowViewState.IdRef="AnchorBase_5">
+                      <ui:AnchorBase.Action>
+                        <ActivityAction x:TypeArguments="ui:Anchor">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                          </ActivityAction.Argument>
+                          <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'P'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_5">
+                            <ui:GetValue.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2a520f94-92b2-4c01-beb7-c20202e90c7e" InformativeScreenshot="98f984b0c7599278c9f4cac7f9290ba7" Selector="&lt;webctrl tag='UL' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:GetValue.Target>
+                            <ui:GetValue.Value>
+                              <OutArgument x:TypeArguments="x:String">[p2]</OutArgument>
+                            </ui:GetValue.Value>
+                          </ui:GetValue>
+                        </ActivityAction>
+                      </ui:AnchorBase.Action>
+                      <ui:AnchorBase.AnchorProvider>
+                        <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'A  /wiki/Kodaikanal'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_5">
+                          <ui:WaitUiElementAppear.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ff65df2c-91f0-44af-9bd4-97c0d4775000" InformativeScreenshot="69c482ae2c62c3c09b82aa8c888fc5d6" Selector="&lt;webctrl tag='SUP' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:WaitUiElementAppear.Target>
+                        </ui:WaitUiElementAppear>
+                      </ui:AnchorBase.AnchorProvider>
+                    </ui:AnchorBase>
+                    <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="planner.txt" sap:VirtualizedContainerService.HintSize="792,166.4" sap2010:WorkflowViewState.IdRef="AppendLine_2" Text="[p2]" UseDefaultEncoding="False" />
+                    <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="planner.txt" sap:VirtualizedContainerService.HintSize="792,166.4" sap2010:WorkflowViewState.IdRef="AppendLine_7" Text="TIME :" UseDefaultEncoding="False" />
+                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: New tab" sap:VirtualizedContainerService.HintSize="792,4698.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" InteractionMode="DebuggerApi" ScopeGuid="e9302705-89a1-4af3-a375-3230f1012a5b" Version="V2">
+                      <uix:NApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="758.4,4456.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="724.8,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_12" InteractionMode="HardwareEvents" ScopeIdentifier="e9302705-89a1-4af3-a375-3230f1012a5b" Text="[&quot;Distance from  &quot;+current+&quot; to &quot;+location + &quot;[k(Enter)]&quot;]" Version="V3">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable BrowserURL="edge://newtab/" CVScreenId="15a24473-4c5c-4991-b151-e49f17039b31" CvTextArea="561, 347, 138, 18" CvTextArgument="Search the web" CvType="Text" DesignTimeRectangle="556, 329, 838, 56" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;ctrl name='New tab' role='document' /&gt;&lt;ctrl name='Enter your search term' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='New tab' role='document' /&gt;&lt;ctrl name='Enter your search term' role='editable text' automationid='' /&gt;" Guid="884716a4-7974-48ed-8c98-8d37db5bf24e" InformativeScreenshot="db1db17522f37efff00cae99bdc89fb4.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='New tab and 1 more page - Personal - Microsoft​ Edge' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="724.8,232" sap2010:WorkflowViewState.IdRef="AnchorBase_8">
+                              <ui:AnchorBase.Action>
+                                <ActivityAction x:TypeArguments="ui:Anchor">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                                  </ActivityAction.Argument>
+                                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_8">
+                                    <ui:GetValue.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="db93aa43-52bc-44cc-8906-7b7a6883bccb" InformativeScreenshot="bb0c841336470d22e80e93411efdb04a" Selector="&lt;webctrl tag='SPAN' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:GetValue.Target>
+                                    <ui:GetValue.Value>
+                                      <OutArgument x:TypeArguments="x:String">[time]</OutArgument>
+                                    </ui:GetValue.Value>
+                                  </ui:GetValue>
+                                </ActivityAction>
+                              </ui:AnchorBase.Action>
+                              <ui:AnchorBase.AnchorProvider>
+                                <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'A '" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_8">
+                                  <ui:WaitUiElementAppear.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cc06ea81-51a8-4297-888b-a3d070f220ce" InformativeScreenshot="e936e87b8749f95394d0aebb1774c325" Selector="&lt;webctrl parentid='b-scopeListItem-images' tag='A' /&gt;">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </ui:WaitUiElementAppear.Target>
+                                </ui:WaitUiElementAppear>
+                              </ui:AnchorBase.AnchorProvider>
+                            </ui:AnchorBase>
+                            <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="724.8,232" sap2010:WorkflowViewState.IdRef="AnchorBase_9">
+                              <ui:AnchorBase.Action>
+                                <ActivityAction x:TypeArguments="ui:Anchor">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                                  </ActivityAction.Argument>
+                                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_9">
+                                    <ui:GetValue.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="db93aa43-52bc-44cc-8906-7b7a6883bccb" InformativeScreenshot="b0731e480f1dbc4228111710c561b3e3" Selector="&lt;webctrl tag='DIV' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:GetValue.Target>
+                                    <ui:GetValue.Value>
+                                      <OutArgument x:TypeArguments="x:String">[distance]</OutArgument>
+                                    </ui:GetValue.Value>
+                                  </ui:GetValue>
+                                </ActivityAction>
+                              </ui:AnchorBase.Action>
+                              <ui:AnchorBase.AnchorProvider>
+                                <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'A '" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_9">
+                                  <ui:WaitUiElementAppear.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cc06ea81-51a8-4297-888b-a3d070f220ce" InformativeScreenshot="65b685bde0aec0e00e576949fcd5f4df" Selector="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl class='drHoursLabel' tableRow='1' tag='DIV' /&gt;">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </ui:WaitUiElementAppear.Target>
+                                </ui:WaitUiElementAppear>
+                              </ui:AnchorBase.AnchorProvider>
+                            </ui:AnchorBase>
+                            <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="planner.txt" sap:VirtualizedContainerService.HintSize="724.8,166.4" sap2010:WorkflowViewState.IdRef="AppendLine_11" Text="[time]" UseDefaultEncoding="False" />
+                            <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="planner.txt" sap:VirtualizedContainerService.HintSize="724.8,166.4" sap2010:WorkflowViewState.IdRef="AppendLine_12" Text="DISTANCE" UseDefaultEncoding="False" />
+                            <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="planner.txt" sap:VirtualizedContainerService.HintSize="724.8,166.4" sap2010:WorkflowViewState.IdRef="AppendLine_13" Text="[kilo.ToString+&quot; &quot;+ distance.ToString]" UseDefaultEncoding="False" />
+                            <p:DocumentReplaceText FilePath="{x:Null}" Found="{x:Null}" DisplayName="Replace Text" sap:VirtualizedContainerService.HintSize="724.8,226.4" sap2010:WorkflowViewState.IdRef="DocumentReplaceText_1" PathResource="[LocalResource.FromPath(&quot;C:\\Users\\Amallesh\\Desktop\\tour plannner.docx&quot;)]" Replace="[name]" Search="_uesr" />
+                            <p:DocumentReplaceText FilePath="{x:Null}" Found="{x:Null}" DisplayName="Replace Text" sap:VirtualizedContainerService.HintSize="724.8,226.4" sap2010:WorkflowViewState.IdRef="DocumentReplaceText_3" PathResource="[LocalResource.FromPath(&quot;C:\\Users\\Amallesh\\Desktop\\tour plannner.docx&quot;)]" Replace="[location]" Search="_NAME" />
+                            <p:DocumentReplaceText FilePath="{x:Null}" Found="{x:Null}" DisplayName="Replace Text" sap:VirtualizedContainerService.HintSize="724.8,226.4" sap2010:WorkflowViewState.IdRef="DocumentReplaceText_2" PathResource="[LocalResource.FromPath(&quot;C:\\Users\\Amallesh\\Desktop\\tour plannner.docx&quot;)]" Replace="[current]" Search="_current" />
+                            <Assign sap:VirtualizedContainerService.HintSize="724.8,114.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[da]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[Now.Date.ToString]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <p:DocumentReplaceText FilePath="{x:Null}" Found="{x:Null}" DisplayName="Replace Text" sap:VirtualizedContainerService.HintSize="724.8,226.4" sap2010:WorkflowViewState.IdRef="DocumentReplaceText_13" PathResource="[LocalResource.FromPath(&quot;C:\\Users\\Amallesh\\Desktop\\tour plannner.docx&quot;)]" Replace="[da]" Search="_Date" />
+                            <p:DocumentReplaceText FilePath="{x:Null}" Found="{x:Null}" DisplayName="Replace Text" sap:VirtualizedContainerService.HintSize="724.8,226.4" sap2010:WorkflowViewState.IdRef="DocumentReplaceText_4" PathResource="[LocalResource.FromPath(&quot;C:\\Users\\Amallesh\\Desktop\\tour plannner.docx&quot;)]" Replace="[time]" Search="_time" />
+                            <p:DocumentReplaceText FilePath="{x:Null}" Found="{x:Null}" DisplayName="Replace Text" sap:VirtualizedContainerService.HintSize="724.8,226.4" sap2010:WorkflowViewState.IdRef="DocumentReplaceText_5" PathResource="[LocalResource.FromPath(&quot;C:\\Users\\Amallesh\\Desktop\\tour plannner.docx&quot;)]" Replace="[kilo.ToString]" Search="_kilo" />
+                            <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="724.8,56.8" sap2010:WorkflowViewState.IdRef="GetPassword_5" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJDGm48zx30qSKxeJpsA3GgAAAAACAAAAAAAQZgAAAAEAACAAAACmwNJzwz+F48DJpc1aZywMwc0I4s+x6h7fw4t/Pv6n5QAAAAAOgAAAAAIAACAAAADMObi1azFZckAa4Afqf/7RfWfUhG8X4/XTIHhUYTtI8xAAAAAZeK0qCpFCK+xxnB1h+BzhQAAAAOSyEG+bkL7sd0Ll4wzcWRxTUeNK/j5UAP84EKOBvecm4OPP2FxZUfZdjxxDFgoQq0zpRx5VoYySOnKyAEXa3L8=" Result="[pwd]" />
+                            <ui:SendMail Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" DisplayName="Send SMTP Mail Message" Email="220701024@rajalakshmi.edu.in" EnableSSL="True" sap:VirtualizedContainerService.HintSize="724.8,183.2" sap2010:WorkflowViewState.IdRef="SendMail_4" IgnoreCRL="False" IsBodyHtml="False" Password="[pwd]" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="[&quot;tour plan to -&quot;+location]" To="220701010@rajalakshmi.edu.in">
+                              <ui:SendMail.Files>
+                                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                                  <InArgument x:TypeArguments="x:String">C:\Users\Amallesh\Documents\UiPath\Tour Planner\planner.txt</InArgument>
+                                  <InArgument x:TypeArguments="x:String">C:\Users\Amallesh\Desktop\tour plannner.docx</InArgument>
+                                </scg:List>
+                              </ui:SendMail.Files>
+                            </ui:SendMail>
+                            <p:DocumentReplaceText FilePath="{x:Null}" Found="{x:Null}" DisplayName="Replace Text" sap:VirtualizedContainerService.HintSize="724.8,226.4" sap2010:WorkflowViewState.IdRef="DocumentReplaceText_6" PathResource="[LocalResource.FromPath(&quot;C:\\Users\\Amallesh\\Desktop\\tour plannner.docx&quot;)]" Replace="_uesr" Search="[name]" />
+                            <p:DocumentReplaceText FilePath="{x:Null}" Found="{x:Null}" DisplayName="Replace Text" sap:VirtualizedContainerService.HintSize="724.8,226.4" sap2010:WorkflowViewState.IdRef="DocumentReplaceText_7" PathResource="[LocalResource.FromPath(&quot;C:\\Users\\Amallesh\\Desktop\\tour plannner.docx&quot;)]" Replace="_NAME" Search="[location]" />
+                            <p:DocumentReplaceText FilePath="{x:Null}" Found="{x:Null}" DisplayName="Replace Text" sap:VirtualizedContainerService.HintSize="724.8,226.4" sap2010:WorkflowViewState.IdRef="DocumentReplaceText_12" PathResource="[LocalResource.FromPath(&quot;C:\\Users\\Amallesh\\Desktop\\tour plannner.docx&quot;)]" Replace="_Date" Search="[da]" />
+                            <p:DocumentReplaceText FilePath="{x:Null}" Found="{x:Null}" DisplayName="Replace Text" sap:VirtualizedContainerService.HintSize="724.8,226.4" sap2010:WorkflowViewState.IdRef="DocumentReplaceText_8" PathResource="[LocalResource.FromPath(&quot;C:\\Users\\Amallesh\\Desktop\\tour plannner.docx&quot;)]" Replace="_current" Search="[current]" />
+                            <p:DocumentReplaceText FilePath="{x:Null}" Found="{x:Null}" DisplayName="Replace Text" sap:VirtualizedContainerService.HintSize="724.8,226.4" sap2010:WorkflowViewState.IdRef="DocumentReplaceText_9" PathResource="[LocalResource.FromPath(&quot;C:\\Users\\Amallesh\\Desktop\\tour plannner.docx&quot;)]" Replace="_time" Search="[time]" />
+                            <p:DocumentReplaceText FilePath="{x:Null}" Found="{x:Null}" DisplayName="Replace Text" sap:VirtualizedContainerService.HintSize="724.8,226.4" sap2010:WorkflowViewState.IdRef="DocumentReplaceText_10" PathResource="[LocalResource.FromPath(&quot;C:\\Users\\Amallesh\\Desktop\\tour plannner.docx&quot;)]" Replace="_kilo" Search="[kilo.ToString]" />
+                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="724.8,110.4" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;MAIL SUCCESSFULLY SENT&quot;]" />
+                          </Sequence>
+                        </ActivityAction>
+                      </uix:NApplicationCard.Body>
+                      <uix:NApplicationCard.TargetApp>
+                        <uix:TargetApp Area="-9, -9, 1938, 1098" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAAQhJREFUWEftl9ENwjAMRDsCIzAKm8AGsAGMwEaMwgiMQP0qTkKy09YkfCDypJNKnFzckLTu0AnYmW6mh+nZUHjuTbOcTdHglmKOkINJnS6mjSlCfTLgdTJpLKvsYIkI0nGOTxIQ3Bhjmcsh49Kdi5oE8GYs+8ux1libczv9ylOcZ20CWsZaOYqBgKup9pg6ioHG9AR6Ar+XAG8wjtz9dS2y7SKdAEaKYSyy7UIxRymAiWKYi2y7UMxRCvCaxghjrkW2XaQTaE1PoCdQnEfHZ6kkq0ElWZiAilIqnm9xNDFHWJRSKis7KuOWK4HX+zdH9IieaFXvzWlxhXl66e9oJfYXnuEHyT8zDCPMjw3PbnWtNQAAAABJRU5ErkJggg==" InformativeScreenshot="7861b6dd0231a75410e329bd2cf5dc5b.png" Selector="&lt;html app='msedge.exe' title='New tab' /&gt;" Title="New tab" Url="edge://newtab/" />
+                      </uix:NApplicationCard.TargetApp>
+                    </uix:NApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-9, -9, 1938, 1098" BrowserType="Edge" IconBase64="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" InformativeScreenshot="d7c090bd17ec5f0f3b2d4226e41683c4.png" Selector="&lt;html app='msedge.exe' title='New tab' /&gt;" Title="New tab" Url="edge://newtab/" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1098" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADsSURBVDhPpZMBDYQwDEVBBRIQgQKkIGEG5gALGMAGBjCAjO3yxv2lg+XChSU/t3bt7++/0OiEEOI/+Ladp1bwBK+ahfcE27bFYRiQE+d5TslxHHN8HEd6B9yXZYld16Wafd9PBTy0bRvXdU0ExH3fF4TkuAPIdM8rUGQfNAlS732RFzHIBKyCbH6VQwVQDBhk48JEHm3BNE1JhWLInXM5BgUBcvECc4ghgwDZxBBaL0BBAJDMFMjYlf3J0QjBtf5GwDRUaBX9Qxhs/RFuBADZ1mkmX80TqgTywOK6u8DnUCV5gtSsUyv4hbOraT5zNVPvKCo8XgAAAABJRU5ErkJggg==" InformativeScreenshot="8cd9be2ed4420f177d22309b9af56ede.jpg" Selector="&lt;html app='msedge.exe' title='Wikipedia' /&gt;" Title="New tab" Url="https://www.wikipedia.org/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
